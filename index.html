@@ -6,46 +6,30 @@
     <title>Lab1</title>
     <link rel="stylesheet" href="style.css">
    <style> 
-body { 
-    background-image: url('assets/background-image1.png');
-    background-repeat: no-repeat;
-    background-attachment: relative;
-     background-position: bottom right;  
-    /* margin: 1em;  */
-    width:100%
-  }
-  header{
-      display: flex;
-      position: relative;
-      justify-content: flex-end;
-  }
-  #img{
-      position: relative;
-  width: 100%;
-  height: auto;
-  }
-  table, th, td {
-  /* border: 0px solid black; */
-  /* text-decoration: none; */
-  border-collapse: collapse;
-  font-size: small;
-  background-color: white;
-  padding: 5px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
+        .popup {
+            zoom: 1.0;
+            position: relative;
+            text-decoration: none;
+        }
 
-caption{
-background-color:#f05136;
-padding: 10px;
-color:white
-}
-a{
-    color: royalblue;
-}
-a:hover{
-    color: royalblue;
-}
+        .popup span {
+            position: fixed;
+            left: -999em;
+            Z-index: 999;
+        }
+
+        .popup:hover {
+            visibility: visible;
+        }
+
+        .popup:hover span {
+            left: 100px;
+        }
+
+        *html .popup span {
+            position: absolute;
+        }
+
   </style>
 </head>
 <body>
@@ -56,11 +40,13 @@ a:hover{
         <h3>India Vs Srilanka Scorecard</h3>
     
     <div id="box1">
-       <label></label>
-        <table id="table" width="50%">
-            <caption>India Innings  277-4(48.2)</caption>
+         <table id="table" width="50%">
+            <caption style="text-align:left">India Innings &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&nbsp;277-4(48.2) </caption>
+            
             <tr>
-                <th align="left">Batsman</th>
+                <th text-align="left">Batsman</th>
                 <th></th>
                 <th>R</th>
                 <th>B</th>
@@ -70,8 +56,10 @@ a:hover{
             </tr>
             
             <tr>
-                <td><a href="target="popup" 
-                    onclick="window.open('assets/Player1.png','popup','width=600,height=600'); return false;">Virendra shewag</a></td>
+                <!-- <td><a href="target="popup
+                    onclick="window.open('assets/Player1.png','popup','width=600,height=600'); return false;">Virendra shewag</a></td> -->
+                    <td><a class="popup" href="#">Virendra Sehwag<span><img src="./assets/Player6.png"
+                        alt="pic"></span></a> </td>
                 <td>Lbw b l Malinga</td>
                 <td>0</td>
                 <td>2</td>
@@ -80,9 +68,11 @@ a:hover{
                 <td>0.0</td>
             </tr>
             <tr>
-                <td><a href="target="popup" 
-                    onclick="window.open('assets/Player2.png','popup','width=600,height=600'); return false;">Sachin Tendulkar</a></td>
-                <td>c K Sangakara b l Malinga</td>
+                <!-- <td><a href="target="popup
+                    onclick="window.open('assets/Player2.png','popup','width=600,height=600'); return false;">Sachin Tendulkar</a></td> -->
+                    <td><a class="popup" href="#">Sachin<span><img src="./assets/Player2.png"
+                        alt="pic"></span></a> </td>
+                    <td>c K Sangakara b l Malinga</td>
                 <td>18</td>
                 <td>14</td>
                 <td>2</td>
@@ -90,8 +80,7 @@ a:hover{
                 <td>128.59</td>
             </tr>
             <tr>
-                <td><a href="target="popup" 
-                    onclick="window.open('assets/Player3.png','popup','width=600,height=600'); return false;">Gautam Gambhir</a></td>
+                <td><a href="target="popup onclick="window.open('assets/Player3.png','popup','width=600,height=600'); return false;">Gautam Gambhir</a></td>
                 <td>b t perera</td>
                 <td>97</td>
                 <td>122</td>
@@ -100,7 +89,7 @@ a:hover{
                 <td>79.51</td>
             </tr>
             <tr>
-                <td><a href="target="popup" 
+                <td><a href="target="popup 
                     onclick="window.open('assets/Player4.png','popup','width=600,height=600'); return false;">Virat Kohli</a></td>
                 <td>c & b T Dilshen</td>
                 <td>35</td>
@@ -110,7 +99,7 @@ a:hover{
                 <td>71.43</td>
             </tr>
             <tr>
-                <td><a href="target="popup" 
+                <td><a href="target="popup
                     onclick="window.open('assets/Player5.png','popup','width=600,height=600'); return false;">Ms dhoni</a></td>
                 <td>not out</td>
                 <td>91</td>
@@ -120,7 +109,7 @@ a:hover{
                 <td>115.19</td>
             </tr>
             <tr>
-                <td><a href="target="popup" 
+                <td><a href="target="popup
                     onclick="window.open('assets/Player6.png','popup','width=600,height=600'); return false;">Yuvraj</a></td>
                 <td>21</td>
                 <td>24</td>
