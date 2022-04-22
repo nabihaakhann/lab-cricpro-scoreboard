@@ -1,11 +1,10 @@
 body { 
     background-image: url('assets/background-image1.png');
     background-repeat: no-repeat;
-    /* background-attachment: relative; */
-     background-position: bottom right;  
-    /* margin: 1em;  */
-    /* width:100%; */
-    background-size: cover;
+    background-size: 85%;
+    background-position-x: right ;
+    background-position-y: top ;
+    
   }
   header{
       display: flex;
@@ -21,11 +20,15 @@ body {
   /* border: 0px solid black; */
   /* text-decoration: none; */
   border-collapse: collapse;
-  font-size: small;
+  font-size: large;
   background-color: white;
-  padding: 5px;
+  padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+}
+
+#head{
+    background: #f05136;
 }
 
 caption{
